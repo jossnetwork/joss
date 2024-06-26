@@ -1,0 +1,6 @@
+usr/local/bin/joss-qt usr/bin
+share/pixmaps/joss32.xpm usr/share/pixmaps
+share/pixmaps/joss16.xpm usr/share/pixmaps
+share/pixmaps/joss128.png usr/share/pixmaps
+debian/joss-qt.desktop usr/share/applications
+debian/joss-qt.protocol usr/share/kde4/services/

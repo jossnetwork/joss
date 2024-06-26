@@ -1,0 +1,25 @@
+<!DOCTYPE RCC><RCC version="1.0">
+    <qresource prefix="/translations">
+        <file alias="ar">locale/joss_ar.qm</file>
+        <file alias="bg">locale/joss_bg.qm</file>
+        <file alias="de">locale/joss_de.qm</file>
+        <file alias="en">locale/joss_en.qm</file>
+        <file alias="es">locale/joss_es.qm</file>
+        <file alias="fi">locale/joss_fi.qm</file>
+        <file alias="fr">locale/joss_fr.qm</file>
+        <file alias="it">locale/joss_it.qm</file>
+        <file alias="ja">locale/joss_ja.qm</file>
+        <file alias="ko">locale/joss_ko.qm</file>
+        <file alias="nl">locale/joss_nl.qm</file>
+        <file alias="pl">locale/joss_pl.qm</file>
+        <file alias="pt">locale/joss_pt.qm</file>
+        <file alias="ro">locale/joss_ro.qm</file>
+        <file alias="ru">locale/joss_ru.qm</file>
+        <file alias="sk">locale/joss_sk.qm</file>
+        <file alias="th">locale/joss_th.qm</file>
+        <file alias="tr">locale/joss_tr.qm</file>
+        <file alias="vi">locale/joss_vi.qm</file>
+        <file alias="zh_CN">locale/joss_zh_CN.qm</file>
+        <file alias="zh_TW">locale/joss_zh_TW.qm</file>
+    </qresource>
+</RCC>

@@ -1,0 +1,70 @@
+Source: joss
+Section: utils
+Priority: optional
+Maintainer: Holger Schinzel <holger@joss.network>
+Uploaders: Holger Schinzel <holger@joss.network>
+Build-Depends: debhelper,
+ devscripts,
+ automake,
+ libtool,
+ bash-completion,
+ libdb4.8++-dev,
+ libssl-dev,
+ pkg-config,
+ libevent-dev,
+ libboost-system1.48-dev | libboost-system-dev (>> 1.47),
+ libboost-filesystem1.48-dev | libboost-filesystem-dev (>> 1.47),
+ libboost-program-options1.48-dev | libboost-program-options-dev (>> 1.47),
+ libboost-thread1.48-dev | libboost-thread-dev (>> 1.47),
+ libboost-test1.48-dev | libboost-test-dev (>> 1.47),
+ libboost-chrono1.48-dev | libboost-chrono-dev (>> 1.47),
+ libminiupnpc8-dev | libminiupnpc-dev,
+ qt4-qmake, libqt4-dev,
+ qttools5-dev-tools, qttools5-dev,
+ libqrencode-dev,
+ libprotobuf-dev, protobuf-compiler,
+ python,
+ libzmq3-dev
+Standards-Version: 3.9.2
+Homepage: https://www.joss.network/
+Vcs-Git: git://github.com/jossnetwork/joss.git
+Vcs-Browser: https://github.com/jossnetwork/joss
+
+Package: jossd
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: peer-to-peer network based digital currency - daemon
+ Joss is an experimental new digital currency that enables instant, private
+ payments to anyone, anywhere in the world. Joss uses peer-to-peer
+ technology to operate with no central authority: managing transactions
+ and issuing money are carried out collectively by the network. Joss Core
+ is the name of the open source software which enables the use of this currency.
+ .
+ This package provides the daemon, jossd, and the CLI tool
+ joss-cli to interact with the daemon.
+
+Package: joss-qt
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: peer-to-peer network based digital currency - Qt GUI
+ Joss is an experimental new digital currency that enables instant, private
+ payments to anyone, anywhere in the world. Joss uses peer-to-peer
+ technology to operate with no central authority: managing transactions
+ and issuing money are carried out collectively by the network. Joss Core
+ is the name of the open source software which enables the use of this currency.
+ .
+ This package provides Joss-Qt, a GUI for Joss based on Qt.
+
+Package: joss-tx
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: peer-to-peer digital currency - standalone transaction tool
+ Joss is an experimental new digital currency that enables instant, private
+ payments to anyone, anywhere in the world. Joss uses peer-to-peer
+ technology to operate with no central authority: managing transactions
+ and issuing money are carried out collectively by the network. Joss Core
+ is the name of the open source software which enables the use of this currency.
+ .
+ This package provides joss-tx, a command-line transaction creation
+ tool which can be used without a joss daemon.  Some means of
+ exchanging minimal transaction data with peers is still required.

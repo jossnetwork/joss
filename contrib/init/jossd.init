@@ -1,0 +1,67 @@
+#!/usr/bin/env bash
+#
+#  jossd The Joss Core server.
+#
+#
+# chkconfig: 345 80 20
+# description: jossd
+# processname: jossd
+#
+
+# Source function library.
+. /etc/init.d/functions
+
+# you can override defaults in /etc/sysconfig/jossd, see below
+if [ -f /etc/sysconfig/jossd ]; then
+        . /etc/sysconfig/jossd
+fi
+
+RETVAL=0
+
+prog=jossd
+# you can override the lockfile via BITCOIND_LOCKFILE in /etc/sysconfig/jossd
+lockfile=${BITCOIND_LOCKFILE-/var/lock/subsys/jossd}
+
+# jossd defaults to /usr/bin/jossd, override with BITCOIND_BIN
+jossd=${BITCOIND_BIN-/usr/bin/jossd}
+
+# jossd opts default to -disablewallet, override with BITCOIND_OPTS
+jossd_opts=${BITCOIND_OPTS--disablewallet}
+
+start() {
+    echo -n $"Starting $prog: "
+    daemon $DAEMONOPTS $jossd $jossd_opts
+    RETVAL=$?
+    echo
+    [ $RETVAL -eq 0 ] && touch $lockfile
+    return $RETVAL
+}
+
+stop() {
+    echo -n $"Stopping $prog: "
+    killproc $prog
+    RETVAL=$?
+    echo
+    [ $RETVAL -eq 0 ] && rm -f $lockfile
+    return $RETVAL
+}
+
+case "$1" in
+    start)
+        start
+        ;;
+    stop)
+        stop
+        ;;
+    status)
+        status $prog
+        ;;
+    restart)
+        stop
+        start
+        ;;
+    *)
+        echo "Usage: service $prog {start|stop|status|restart}"
+        exit 1
+        ;;
+esac

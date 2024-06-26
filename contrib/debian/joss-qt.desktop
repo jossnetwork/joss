@@ -1,0 +1,13 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=Joss Core
+Comment=Joss P2P Cryptocurrency
+Comment[de]=Verbinde mit dem Joss peer-to-peer Netzwerk
+Comment[fr]=Joss, monnaie virtuelle cryptographique pair à pair
+Comment[tr]=Joss, eşten eşe kriptografik sanal para birimi
+Exec=joss-qt %u
+Terminal=false
+Type=Application
+Icon=joss128
+MimeType=x-scheme-handler/joss;
+Categories=Office;Finance;
